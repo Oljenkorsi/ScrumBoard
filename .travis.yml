@@ -1,14 +1,14 @@
 matrix:
-	include:
-		-   language: node_js # frontend
-		    node_js:
-                "6"
-            before_script:
-                -   cd frontend
-            script:
-                -   npm run build
+  include:
+    - language: node_js # frontend
+      node_js:
+        - "6"
+      before_script:
+        - cd frontend
+      script:
+        - npm run build
 
 notifications:
-	email:
-		on_success: never
-		on_failure: never # change later to always
+  email:
+    on_success: never
+    on_failure: never # change later to always
