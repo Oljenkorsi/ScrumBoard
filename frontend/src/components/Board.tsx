@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Grid, Segment } from 'semantic-ui-react';
 
-export interface BoardProps {
+interface BoardProps {
 	labels: object;
 }
 
