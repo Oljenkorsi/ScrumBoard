@@ -9,8 +9,6 @@ const Board: React.SFC<BoardProps> = (props: BoardProps) => {
 	const labels = props.labels;
 
 	const columns = () => {
-
-		
 		const content = (tasks: string[]) => {
 			return tasks.map(task => <Segment>{task}</Segment>);
 		};
