@@ -5,21 +5,27 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts-ts": "2.14.0"
+    "react-scripts-ts": "2.14.0",
+    "semantic-ui-react": "^0.79.0"
   },
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
+    "ci-test": "cross-env CI=true react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "lint": "tslint --config tslint.json --project tsconfig.json"
+    "lint": "tslint --config tslint.json --project tsconfig.json",
+    "prettier": "prettier --config ./.prettierrc --write \"./**/*.{ts,tsx}\""
   },
   "devDependencies": {
     "@types/jest": "^22.2.0",
     "@types/node": "^9.4.7",
     "@types/react": "^16.0.40",
     "@types/react-dom": "^16.0.4",
+    "cross-env": "^5.1.4",
+    "prettier": "^1.11.1",
     "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.10.0",
     "typescript": "^2.7.2"
   }
 }
