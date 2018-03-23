@@ -9,6 +9,14 @@ matrix:
       script:
         - npm run build
         - npm run test
+    - language: node_js # shared
+      node_js:
+        - "6"
+      before_script:
+        - cd shared
+        - npm i
+      script:
+        - npm run lint
 
 notifications:
   email:
