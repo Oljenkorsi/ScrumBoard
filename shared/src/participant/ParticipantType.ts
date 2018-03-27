@@ -1,5 +1,7 @@
-export enum ParticipantType {
+enum ParticipantType {
 	designer,
 	developer,
 	tester,
 }
+
+export default ParticipantType;

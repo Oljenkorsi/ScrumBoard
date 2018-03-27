@@ -1,8 +1,8 @@
-import { Participant } from '../participant/Participant';
-import { TaskPriority } from './TaskPriority';
-import { TaskType } from './TaskType';
+import Participant from '../participant/Participant';
+import TaskPriority from './TaskPriority';
+import TaskType from './TaskType';
 
-export class Task {
+export default class Task {
 	assignee: Participant;
 	description: string;
 	priority: TaskPriority;

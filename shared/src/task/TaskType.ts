@@ -1,4 +1,5 @@
-export enum TaskType {
+enum TaskType {
 	bugfix,
 	feature,
 }
+export default TaskType;

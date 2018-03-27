@@ -10,11 +10,11 @@ const Board: React.SFC<BoardProps> = (props: BoardProps) => {
 
 	const columns = () => {
 		const content = (tasks: string[]) => {
-			return tasks.map(task => <Segment>{task}</Segment>);
+			return tasks.map(task => <Segment key={task}>{task}</Segment>);
 		};
 
 		return Object.keys(labels).map(label => (
-			<Grid.Column width={4}>
+			<Grid.Column width={4} key={label}>
 				<Segment>
 					{label}
 					{content(labels[label])}

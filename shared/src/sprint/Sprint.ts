@@ -1,5 +1,5 @@
-import { Task } from '../task/Task';
+import Task from '../task/Task';
 
-export class Sprint {
+export default class Sprint {
 	tasks: Task[];
 }

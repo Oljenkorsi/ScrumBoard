@@ -1,7 +1,7 @@
-import { Sprint } from '../sprint/Sprint';
-import { Task } from '../task/Task';
+import Sprint from '../sprint/Sprint';
+import Task from '../task/Task';
 
-export class Project {
+export default class Project {
 	sprints: Sprint[];
 	tasks: Task[];
 }
