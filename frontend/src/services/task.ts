@@ -53,13 +53,6 @@ const tasks = [
 		title: 'As a user I want tasks to have order for prioritizing',
 		type: TaskType.feature,
 	},
-	{
-		assignee: { name: 'Veini', type: ParticipantType.developer },
-		description: 'npm install in shared/frontend removes symlink',
-		priority: TaskPriority.high,
-		title: 'As a developer I want to have shared-symlink at all times so I want to add it to npm run init script',
-		type: TaskType.feature,
-	},
 ];
 
 const allTasks = (): Task[] => {
