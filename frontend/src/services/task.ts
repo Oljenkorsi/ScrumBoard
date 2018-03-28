@@ -5,7 +5,7 @@ import TaskType from '../../node_modules/shared/src/task/TaskType';
 
 const tasks = [
 	{
-		assignee: { name: 'Otto', type: ParticipantType.developer },
+		assignee: { name: 'Anyone', type: ParticipantType.developer },
 		description: 'so that I can follow Scrum',
 		priority: TaskPriority.high,
 		title: 'As a user I want to add tasks to scrumboard',
@@ -13,10 +13,10 @@ const tasks = [
 	},
 	{
 		assignee: { name: 'Otto', type: ParticipantType.developer },
-		description: 'so that I can follow Scrum',
-		priority: TaskPriority.high,
-		title: 'As a user I want to drag tasks to prioritize',
-		type: 1,
+		description: 'so that it is not before column label',
+		priority: TaskPriority.low,
+		title: 'As a user I want to drag a task to an empty list',
+		type: TaskType.bugfix,
 	},
 	{
 		assignee: { name: 'Veini', type: ParticipantType.developer },
@@ -52,6 +52,27 @@ const tasks = [
 		priority: TaskPriority.high,
 		title: 'As a user I want tasks to have order for prioritizing',
 		type: TaskType.feature,
+	},
+	{
+		assignee: { name: 'Veini', type: ParticipantType.developer },
+		description: 'so that UI is beautiful',
+		priority: TaskPriority.low,
+		title: 'As a user I want to disable scrolling to left because overflow-x won\'t work',
+		type: TaskType.feature,
+	},
+	{
+		assignee: { name: 'Otto', type: ParticipantType.developer },
+		description: 'so that code is beautiful',
+		priority: TaskPriority.low,
+		title: 'As a dev I want to have styles and types in a different folder',
+		type: TaskType.feature,
+	},
+	{
+		assignee: { name: 'Otto', type: ParticipantType.developer },
+		description: 'user-drag: none not on ff',
+		priority: TaskPriority.low,
+		title: 'As a dev I want to disable ghost while dragging column labels on firefox',
+		type: TaskType.bugfix,
 	},
 ];
 
