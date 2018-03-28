@@ -57,7 +57,7 @@ const tasks = [
 		assignee: { name: 'Veini', type: ParticipantType.developer },
 		description: 'so that UI is beautiful',
 		priority: TaskPriority.low,
-		title: 'As a user I want to disable scrolling to left because overflow-x won\'t work',
+		title: 'As a user I want to disable scrolling to left because overflow-x wont work',
 		type: TaskType.feature,
 	},
 	{

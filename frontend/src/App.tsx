@@ -12,19 +12,22 @@ class App extends React.Component {
 
 	render() {
 		return (
-				<div className="App">
-					<header className="App-header">
-						<h1 className="App-title">Welcome to Scrumboard</h1>
-					</header>
-					<NavBar />
-					<Grid>
-						<Board labels={{
-								Backlog: this.tasks(),
-								'Work In Progress': [],
-								'In Review': [],
-								Done: ['As a user I want to drag tasks to prioritize']}} />
-					</Grid>
-				</div>
+			<div className="App">
+				<header className="App-header">
+					<h1 className="App-title">Welcome to Scrumboard</h1>
+				</header>
+				<NavBar />
+				<Grid>
+					<Board
+						labels={{
+							Backlog: this.tasks(),
+							'Work In Progress': [],
+							'In Review': [],
+							Done: ['As a user I want to drag tasks to prioritize'],
+						}}
+					/>
+				</Grid>
+			</div>
 		);
 	}
 }

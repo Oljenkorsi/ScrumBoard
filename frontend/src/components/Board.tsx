@@ -13,15 +13,19 @@ interface GroupProps {
 
 const SharedGroup: React.SFC<GroupProps> = ({ items }) => {
 	return (
-		<ReactSortable options={{group: 'shared',
+		<ReactSortable
+			options={{
+				group: 'shared',
 				onMove: (e, oe) => {
 					console.log('e', e);
-					const notLabel = (el) => el.tagName !== 'SECTION';
+					const notLabel = el => el.tagName !== 'SECTION';
 					// column labels return false and thus aren't draggable to fix dragging to empty list
-					return (notLabel(e.dragged) && notLabel(e.related)) ||
-						(notLabel(e.dragged) && !notLabel(e.related));
-				}
-			}} tag="div">
+					return (
+						(notLabel(e.dragged) && notLabel(e.related)) || (notLabel(e.dragged) && !notLabel(e.related))
+					);
+				},
+			}}
+			tag="div">
 			{items}
 		</ReactSortable>
 	);
@@ -30,22 +34,22 @@ const SharedGroup: React.SFC<GroupProps> = ({ items }) => {
 const Board: React.SFC<BoardProps> = ({ labels }) => {
 	const columns = () => {
 		const content = (tasks: string[]) => {
-			return tasks.map(task =>
+			return tasks.map(task => (
 				<Segment key={task} color="green" secondary={true} data-id={task}>
 					{task}
-				</Segment>);
+				</Segment>
+			));
 		};
 
 		const ColumnLabel = styled.section`
 			padding-bottom: 0.2rem;
-			user-drag: none;`;
+			user-drag: none;
+		`;
 
 		return Object.keys(labels).map(label => (
 			<Grid.Column width={4} key={label}>
 				<Segment>
-					<SharedGroup items={[
-						<ColumnLabel>{label}</ColumnLabel>,
-						...content(labels[label])]}/>
+					<SharedGroup items={[<ColumnLabel>{label}</ColumnLabel>, ...content(labels[label])]} />
 				</Segment>
 			</Grid.Column>
 		));
@@ -55,7 +59,8 @@ const Board: React.SFC<BoardProps> = ({ labels }) => {
 		padding-top: 1rem;
 		padding-left: 2rem;
 		padding-right: 2rem;
-		background: #ADD8E6;`;
+		background: #add8e6;
+	`;
 
 	return (
 		<div>
