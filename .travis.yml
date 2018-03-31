@@ -12,8 +12,7 @@ matrix:
       node_js:
         - "6"
       before_script:
-        - cd frontend
-        - npm i
+        - cd frontend; npm i; cd ../shared; npm i; cd ../frontend; npm run link
       script:
         - npm run build
         - npm run test

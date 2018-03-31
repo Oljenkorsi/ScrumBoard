@@ -1,6 +1,6 @@
-import { ParticipantType } from './ParticipantType';
+import ParticipantType from './ParticipantType';
 
-export class Participant {
+export default class Participant {
 	name: string;
 	type: ParticipantType;
 }
