@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Backlog from './components/Backlog';
 import Board from './components/Board';
 import NavBar from './components/NavBar';
 import { allTasks } from './services/task';
@@ -17,9 +18,8 @@ class App extends React.Component {
 					<h1 className="App-title">Welcome to Scrumboard</h1>
 				</header>
 				<NavBar />
-				<Board
-					tasks={this.tasks()}
-				/>
+				<Backlog tasks={this.tasks()} />
+				<Board tasks={this.tasks()} />
 			</div>
 		);
 	}
