@@ -12,13 +12,6 @@ const tasks = [
 		type: TaskType.feature,
 	},
 	{
-		assignee: { name: 'Otto', type: ParticipantType.developer },
-		description: 'so that it is not before column label',
-		priority: TaskPriority.low,
-		title: 'As a user I want to drag a task to an empty list',
-		type: TaskType.bugfix,
-	},
-	{
 		assignee: { name: 'Veini', type: ParticipantType.developer },
 		description: 'so that I can follow Scrum',
 		priority: TaskPriority.high,
@@ -64,7 +57,7 @@ const tasks = [
 		assignee: { name: 'Otto', type: ParticipantType.developer },
 		description: 'so that code is beautiful',
 		priority: TaskPriority.low,
-		title: 'As a dev I want to have styles and types in a different folder',
+		title: 'As a dev I want to the columns to re-prioritize if I drop a task in middle of two tasks',
 		type: TaskType.feature,
 	},
 	{

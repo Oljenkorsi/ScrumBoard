@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Grid } from 'semantic-ui-react';
-import '../src/components/styles.css';
+import { Container } from 'semantic-ui-react';
+import '../src/styles/styles.css';
 import Board from './components/Board';
 import NavBar from './components/NavBar';
 import { allTasks } from './services/task';
@@ -17,16 +17,19 @@ class App extends React.Component {
 					<h1 className="App-title">Welcome to Scrumboard</h1>
 				</header>
 				<NavBar />
-				<Grid>
+				<Container fluid={true}>
 					<Board
 						labels={{
 							Backlog: this.tasks(),
 							'Work In Progress': [],
 							'In Review': [],
-							Done: ['As a user I want to drag tasks to prioritize'],
+							Done: [
+								'As a user I want to drag a task to an empty list',
+								'As a user I want to drag tasks to prioritize',
+							],
 						}}
 					/>
-				</Grid>
+				</Container>
 			</div>
 		);
 	}
