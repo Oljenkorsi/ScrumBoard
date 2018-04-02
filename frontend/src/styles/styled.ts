@@ -8,14 +8,14 @@ const Marker = styled.section`
 const ColumnLabel = styled.section`
 	padding-bottom: 0.4rem;
 	user-drag: none;
-	qmin-height: 1.5rem;
+	min-height: 2.5rem;
 `;
 
-const Wrapper = styled.section`
+const BoardWrapper = styled.section`
 	padding-top: 1rem;
 	padding-left: 2rem;
 	padding-right: 2rem;
 	background: #add8e6;
 `;
 
-export { Marker, ColumnLabel, Wrapper };
+export { Marker, ColumnLabel, BoardWrapper };

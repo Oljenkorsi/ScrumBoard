@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Grid, Segment } from 'semantic-ui-react';
-import { ColumnLabel, Marker, Wrapper } from '../styles/styled';
+import { BoardWrapper, ColumnLabel, Marker } from '../styles/styled';
 import SortableGroup from './SortableGroup';
 
 interface BoardProps {
@@ -28,13 +28,8 @@ const Board: React.SFC<BoardProps> = ({ labels }) => {
 		return Object.keys(labels).map(label => (
 			<Grid.Column width={4} key={label}>
 				<Segment>
-					<SortableGroup
-						items={[
-							<ColumnLabel key={'column_' + label}>{label}</ColumnLabel>,
-							...content(labels[label]),
-							emptyMarker(label),
-						]}
-					/>
+					<ColumnLabel key={'column_' + label}>{label}</ColumnLabel>
+					<SortableGroup items={[...content(labels[label]), emptyMarker(label)]} />
 				</Segment>
 			</Grid.Column>
 		));
@@ -42,11 +37,11 @@ const Board: React.SFC<BoardProps> = ({ labels }) => {
 
 	return (
 		<div>
-			<Wrapper>
+			<BoardWrapper>
 				<Grid stackable={true}>
 					<Grid.Row>{columns()}</Grid.Row>
 				</Grid>
-			</Wrapper>
+			</BoardWrapper>
 		</div>
 	);
 };

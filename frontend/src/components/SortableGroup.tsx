@@ -13,11 +13,9 @@ const SortableGroup: React.SFC<GroupProps> = ({ items }) => {
 				sort: false,
 				onMove: (e, oe) => {
 					const notMarker = el => el.firstChild.className !== 'empty';
-					const notLabel = el => el.tagName !== 'SECTION';
-					const isDraggable = el => notLabel(el) && notMarker(el);
-					const isEmptyColumn = el => !notMarker(el) && el.parentElement.childElementCount === 2;
+					const isEmptyColumn = el => el.parentElement.childElementCount === 1;
 					const { dragged: from, related: to } = e;
-					return isDraggable(from) && (isDraggable(to) || isEmptyColumn(to));
+					return notMarker(from) && (notMarker(to) || isEmptyColumn(to));
 				},
 			}}
 			tag="div">
