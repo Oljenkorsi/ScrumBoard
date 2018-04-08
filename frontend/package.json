@@ -18,7 +18,7 @@
 		"ci-test": "cross-env CI=true react-scripts-ts test --env=jsdom",
 		"eject": "react-scripts-ts eject",
 		"lint": "tslint --config tslint.json --project tsconfig.json",
-		"prettier": "prettier --config ./.prettierrc --list-different --write \"./**/*.{json,ts,tsx}\""
+		"prettier": "prettier --config ./.prettierrc --list-different --write \"./**/*.{ts,tsx,json,prettierrc}\""
 	},
 	"devDependencies": {
 		"@types/jest": "^22.2.0",
