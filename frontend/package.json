@@ -9,16 +9,16 @@
     "semantic-ui-react": "^0.79.0"
   },
   "scripts": {
-    "hook": "cp pre-commit ../.git/hooks/pre-commit && chmod +x ../.git/hooks/pre-commit",
+		"hook": "cp pre-commit ../.git/hooks/pre-commit && chmod +x ../.git/hooks/pre-commit",
 		"copy-shared": "rsync -ua ../shared/src/. ./src/shared || cp -a ../shared/src/. ./src/shared",
-    "init": "mkdir -p ./src/shared && npm run copy-shared",
-    "start": "npm run init && react-scripts-ts start",
-    "build": "npm run init && react-scripts-ts build",
-    "test": "npm run init && react-scripts-ts test --env=jsdom",
-    "ci-test": "cross-env CI=true react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
-    "lint": "tslint --config tslint.json --project tsconfig.json",
-    "prettier": "prettier --config ./.prettierrc --list-different --write \"./**/*.{ts,tsx}\""
+		"init": "mkdir -p ./src/shared && npm run copy-shared",
+		"start": "npm run init && react-scripts-ts start",
+		"build": "npm run init && react-scripts-ts build",
+		"test": "npm run init && react-scripts-ts test --env=jsdom",
+		"ci-test": "cross-env CI=true react-scripts-ts test --env=jsdom",
+		"eject": "react-scripts-ts eject",
+		"lint": "tslint --config tslint.json --project tsconfig.json",
+		"prettier": "prettier --config ./.prettierrc --list-different --write \"./**/*.{ts,tsx}\""
   },
   "devDependencies": {
     "@types/jest": "^22.2.0",
