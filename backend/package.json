@@ -4,7 +4,7 @@
 	"description": "",
 	"scripts": {
 		"copy-shared": "rsync -ua ../shared/src/. ./src/shared || cp -a ../shared/src/. ./src/shared",
-    	"init": "mkdir -p ./src/shared && npm run copy-shared",
+		"init": "mkdir -p ./src/shared && npm run copy-shared",
 		"lint": "tslint --config tslint.json --project tsconfig.json"
 	},
 	"license": "MIT",
