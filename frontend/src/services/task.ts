@@ -5,18 +5,11 @@ import TaskType from '../shared/task/TaskType';
 
 const tasks = [
 	{
-		assignee: { name: 'Otto', type: ParticipantType.developer },
+		assignee: { name: 'Anyone', type: ParticipantType.developer },
 		description: 'so that I can follow Scrum',
 		priority: TaskPriority.high,
 		title: 'As a user I want to add tasks to scrumboard',
 		type: TaskType.feature,
-	},
-	{
-		assignee: { name: 'Otto', type: ParticipantType.developer },
-		description: 'so that I can follow Scrum',
-		priority: TaskPriority.high,
-		title: 'As a user I want to drag tasks to prioritize',
-		type: 1,
 	},
 	{
 		assignee: { name: 'Veini', type: ParticipantType.developer },
@@ -52,6 +45,27 @@ const tasks = [
 		priority: TaskPriority.high,
 		title: 'As a user I want tasks to have order for prioritizing',
 		type: TaskType.feature,
+	},
+	{
+		assignee: { name: 'Veini', type: ParticipantType.developer },
+		description: 'so that UI is beautiful',
+		priority: TaskPriority.low,
+		title: 'As a user I want to disable scrolling to left because overflow-x wont work',
+		type: TaskType.feature,
+	},
+	{
+		assignee: { name: 'Otto', type: ParticipantType.developer },
+		description: 'so that code is beautiful',
+		priority: TaskPriority.low,
+		title: 'As a dev I want to the columns to re-prioritize if I drop a task in middle of two tasks',
+		type: TaskType.feature,
+	},
+	{
+		assignee: { name: 'Otto', type: ParticipantType.developer },
+		description: 'user-drag: none not on ff',
+		priority: TaskPriority.low,
+		title: 'As a dev I want to disable ghost while dragging column labels on firefox',
+		type: TaskType.bugfix,
 	},
 ];
 
