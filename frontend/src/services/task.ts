@@ -1,7 +1,7 @@
-import ParticipantType from '../../node_modules/shared/src/participant/ParticipantType';
-import Task from '../../node_modules/shared/src/task/Task';
-import TaskPriority from '../../node_modules/shared/src/task/TaskPriority';
-import TaskType from '../../node_modules/shared/src/task/TaskType';
+import ParticipantType from '../shared/participant/ParticipantType';
+import Task from '../shared/task/Task';
+import TaskPriority from '../shared/task/TaskPriority';
+import TaskType from '../shared/task/TaskType';
 
 const tasks = [
 	{

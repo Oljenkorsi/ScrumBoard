@@ -1,11 +1,17 @@
 {
-  "parser": "typescript",
-  "trailingComma": "es5",
-  "singleQuote": true,
-  "useTabs": true,
-  "tabWidth": 4,
-  "printWidth": 120,
-  "jsxBracketSameLine": true,
-  "bracketSpacing": true,
-  "semi": true
+	"parser": "typescript",
+	"trailingComma": "es5",
+	"singleQuote": true,
+	"useTabs": true,
+	"tabWidth": 4,
+	"printWidth": 120,
+	"jsxBracketSameLine": true,
+	"bracketSpacing": true,
+	"semi": true,
+	"overrides": [
+		{
+			"files": ["*.json", ".prettierrc"],
+			"options": { "parser": "json" }
+		}
+	]
 }
