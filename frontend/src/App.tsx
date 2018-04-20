@@ -1,14 +1,22 @@
+import { observable } from 'mobx';
+import { observer } from 'mobx-react';
 import * as React from 'react';
 import { Container } from 'semantic-ui-react';
 import '../src/styles/styles.css';
 import Board from './components/Board';
 import NavBar from './components/NavBar';
 import { allTasks } from './services/task';
+import Task from './shared/task/Task';
 
+@observer
 class App extends React.Component {
-	tasks = (): string[] => {
-		return Array.from(allTasks()).map(task => task.title);
-	};
+	@observable
+	tasks: Task[] = [];
+
+	componentDidMount() {
+		// load tasks from backend here
+		setTimeout(() => { this.tasks = allTasks(); }, 1000);
+	}
 
 	render() {
 		return (
@@ -19,14 +27,11 @@ class App extends React.Component {
 				<NavBar />
 				<Container fluid={true}>
 					<Board
-						labels={{
-							Backlog: this.tasks(),
+						columns={{
+							Backlog: this.tasks,
 							'Work In Progress': [],
 							'In Review': [],
-							Done: [
-								'As a user I want to drag a task to an empty list',
-								'As a user I want to drag tasks to prioritize',
-							],
+							Done: [],
 						}}
 					/>
 				</Container>
