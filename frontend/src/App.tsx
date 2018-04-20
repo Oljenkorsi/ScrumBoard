@@ -14,9 +14,10 @@ class App extends React.Component {
 
 	componentDidMount() {
 		// load tasks from backend here
-		setTimeout(() => {
+		const update = () => {
 			this.tasks = allTasks();
-		}, 1000);
+		};
+		setTimeout(update, 1000);
 	}
 
 	render() {
