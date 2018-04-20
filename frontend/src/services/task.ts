@@ -6,6 +6,13 @@ import TaskType from '../shared/task/TaskType';
 const tasks = [
 	{
 		assignee: { name: 'Anyone', type: ParticipantType.developer },
+		description: 'so that tasks are in right place',
+		priority: TaskPriority.high,
+		title: 'As a developer I want tasks to contain their column number',
+		type: TaskType.feature,
+	},
+	{
+		assignee: { name: 'Anyone', type: ParticipantType.developer },
 		description: 'so that I can follow Scrum',
 		priority: TaskPriority.high,
 		title: 'As a user I want to add tasks to scrumboard',

@@ -68,7 +68,8 @@
 				},
 				"esSpecCompliant": true,
 				"singleline": "never"
-			}],
+			}
+		],
 
 		"triple-equals": [true, "allow-null-check"],
 		"typedef": [

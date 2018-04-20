@@ -1,14 +1,19 @@
 import * as React from 'react';
 import { Grid, Segment } from 'semantic-ui-react';
+import Task from '../shared/task/Task';
 import { BoardWrapper, ColumnLabel, Marker } from '../styles/styled';
 import SortableGroup from './SortableGroup';
 
-interface BoardProps {
-	labels: object;
+interface Columns {
+	[label: string]: Task[];
 }
 
-const Board: React.SFC<BoardProps> = ({ labels }) => {
-	const columns = () => {
+interface BoardProps {
+	columns: Columns;
+}
+
+const Board: React.SFC<BoardProps> = ({ columns }) => {
+	const container = () => {
 		const emptyMarker = (label: string) => {
 			return (
 				<Marker key={'empty_' + label}>
@@ -17,19 +22,19 @@ const Board: React.SFC<BoardProps> = ({ labels }) => {
 			);
 		};
 
-		const content = (tasks: string[]) => {
+		const content = (tasks: Task[]) => {
 			return tasks.map(task => (
-				<Segment key={task} color="green" secondary={true} data-id={task}>
-					{task}
+				<Segment key={task.title} color="green" secondary={true} data-id={task.title}>
+					{task.title}
 				</Segment>
 			));
 		};
 
-		return Object.keys(labels).map(label => (
+		return Object.keys(columns).map(label => (
 			<Grid.Column width={4} key={'column_' + label}>
 				<Segment>
 					<ColumnLabel>{label}</ColumnLabel>
-					<SortableGroup items={[...content(labels[label]), emptyMarker(label)]} />
+					<SortableGroup items={[...content(columns[label]), emptyMarker(label)]} />
 				</Segment>
 			</Grid.Column>
 		));
@@ -38,7 +43,7 @@ const Board: React.SFC<BoardProps> = ({ labels }) => {
 	return (
 		<BoardWrapper>
 			<Grid stackable={true}>
-				<Grid.Row>{columns()}</Grid.Row>
+				<Grid.Row>{container()}</Grid.Row>
 			</Grid>
 		</BoardWrapper>
 	);
