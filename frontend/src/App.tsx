@@ -10,12 +10,13 @@ import Task from './shared/task/Task';
 
 @observer
 class App extends React.Component {
-	@observable
-	tasks: Task[] = [];
+	@observable tasks: Task[] = [];
 
 	componentDidMount() {
 		// load tasks from backend here
-		setTimeout(() => { this.tasks = allTasks(); }, 1000);
+		setTimeout(() => {
+			this.tasks = allTasks();
+		}, 1000);
 	}
 
 	render() {

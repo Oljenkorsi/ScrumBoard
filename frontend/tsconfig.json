@@ -17,7 +17,7 @@
 		"strictNullChecks": false,
 		"suppressImplicitAnyIndexErrors": true,
 		"noUnusedLocals": true,
-		"experimentalDecorators": true,
+		"experimentalDecorators": true
 	},
 	"exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest", "src/setupTests.ts"]
 }
